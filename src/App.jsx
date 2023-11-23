@@ -7,7 +7,7 @@ import {
   Homepage,
   Cryptocurrencies,
   CryptoDetails,
-  News
+  News,
 } from "./components";
 import "./App.css";
 import { AlignCenterOutlined } from "@ant-design/icons";
@@ -21,18 +21,21 @@ const App = () => {
       <div className="main">
         <Layout>
           <div className="routes">
-           <Routes>
+            <Routes>
               <Route path="/" element={<Homepage />} />
               <Route path="/exchanges" element={<Exchanges />} />
               <Route path="/cryptocurrencies" element={<Cryptocurrencies />} />
               <Route path="/crypto/:coinId" element={<CryptoDetails />} />
               <Route path="/news" element={<News />} />
-           </Routes>
+            </Routes>
           </div>
         </Layout>
-      <div className="footer">
-          <Typography.Title level={5} style={{color:'white', textAlign:'center'}}>
-            Cripto World <br />
+        <div className="footer">
+          <Typography.Title
+            level={5}
+            style={{ color: "white", textAlign: "center" }}
+          >
+            CryptoWorld <br />
             All rights reserved
           </Typography.Title>
           <Space>
@@ -40,7 +43,7 @@ const App = () => {
             <Link to="/exchanges">Exchanges</Link>
             <Link to="/news">News</Link>
           </Space>
-      </div>
+        </div>
       </div>
     </div>
   );
